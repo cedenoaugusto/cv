@@ -5,38 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Augusto Cedeño</title>
     <style>
-        /* Add some basic styling */
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 80%;
             margin: 0;
-            padding: 0;
-            overflow-x: hidden;
         }
         header {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1em;
-        }
-        nav {
-            background-color: #444;
-            color: white;
-            padding: 0.5em;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        main {
             padding: 1em;
         }
         footer {
@@ -47,6 +23,17 @@
             position: absolute;
             bottom: 0;
             width: 100%;
+        } 
+        iframe {
+            display: block;
+            background: #000;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .resaltarBordes{
+            /*border:2px solid red;*/
         }
     </style>
 
@@ -54,25 +41,41 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <header>
         <h1>Augusto's resume</h1>
     </header>
 
-    <div id="includedNavbar"></div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">AC</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./aboutme.html" target="contentFrame">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./education.html" target="contentFrame">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./experience.html" target="contentFrame">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./courses.html" target="contentFrame">Courses</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
 
-    <div w3-include-html="navbar.html"></div>
-
-    <iframe src="navbar.html" width="100%" height="50px"></iframe>
-
-    <object type="text/html" data="navbar.html" width="100%" height="50px"></object>
-
-    <main>
-        <h2>Welcome to My Web Page</h2>
-        <p>Here you can see more detailed information about me.</p>
-    </main>
+    <iframe id="contentFrame" name="contentFrame" src="home.html" class="resaltarBordes"></iframe>
 
     <footer>
         <p>Augusto Cedeño</p>
