@@ -23,7 +23,8 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-        } 
+        }
+        
         iframe {
             display: block;
             background: #000;
@@ -32,8 +33,13 @@
             height: 100%;
         }
 
-        .resaltarBordes{
+        .styleFrame{
+            border:0px;
             /*border:2px solid red;*/
+        }
+
+        li a:hover { 
+            color: #146d23 !important;
         }
     </style>
 
@@ -56,26 +62,27 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <!-- class="nav-link active" aria-current="page" -->
+                <a class="nav-link text-primary" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link text-primary" href="./aboutme.html" target="contentFrame">About me</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./aboutme.html" target="contentFrame">About me</a>
+                <a class="nav-link text-primary" href="./education.html" target="contentFrame">Education</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./education.html" target="contentFrame">Education</a>
+                <a class="nav-link text-primary" href="./experience.html" target="contentFrame">Experience</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./experience.html" target="contentFrame">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./courses.html" target="contentFrame">Courses</a>
+                <a class="nav-link text-primary" href="./courses.html" target="contentFrame">Courses</a>
               </li>
             </ul>
           </div>
         </div>
     </nav>
 
-    <iframe id="contentFrame" name="contentFrame" src="home.html" class="resaltarBordes"></iframe>
+    <iframe id="contentFrame" name="contentFrame" src="home.html" class="styleFrame"></iframe>
 
     <footer>
         <p>Augusto Cedeño</p>
